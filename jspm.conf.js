@@ -1,5 +1,4 @@
 System.config({
-  "defaultJSExtensions": true,
   "transpiler": "typescript",
   "babelOptions": {
     "optional": [
@@ -7,12 +6,14 @@ System.config({
     ],
     "stage": 1
   },
+  "paths": {
+    "github:*": "jspm_packages/github/*.js",
+    "npm:*": "jspm_packages/npm/*.js",
+    "*": "*.js"
+  },
+  "defaultJSExtensions": true,
   "typescriptOptions": {
     "emitDecoratorMetadata": true
-  },
-  "paths": {
-    "github:*": "jspm_packages/github/*",
-    "npm:*": "jspm_packages/npm/*"
   }
 });
 
